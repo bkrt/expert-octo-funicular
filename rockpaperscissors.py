@@ -1,7 +1,6 @@
 from random import choice
 
 computer_choices = ["Rock", "Paper", "Scissors"]
-computer_move = choice(computer_choices)
 win_statement = "I win! Yay!"
 lose_statement = "Rats! You beat me!"
 tie_statement = "Looks like we picked the same move. No winner this time, I guess."
@@ -38,6 +37,7 @@ while (not endPrgm):
     elif difficulty.lower() == "easy":
         endGame = False
         while (not endGame):
+            computer_move = choice(computer_choices)
             player_move = raw_input ("Will you play Rock, Paper, or Scissors? Please type your selection: ")
             if player_move.lower() == "rock":
                 print ("I choose " + computer_move)
